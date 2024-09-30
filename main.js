@@ -2,11 +2,11 @@ document.querySelector('.js-form').addEventListener('submit', function (e) {
   e.preventDefault();
 
   // Obtener valores del formulario
-  const amount = parseFloat(document.querySelector('amount').value);
-  const term = parseInt(document.querySelector('term').value);
-  const rate = parseFloat(document.querySelector('rate').value);
-  const isRepayment = document.querySelector('repayment').checked;
-  const isInterestOnly = document.querySelector('interest-only').checked;
+  const amount = parseFloat(document.getElementById('amount').value);
+  const term = parseInt(document.getElementById('term').value);
+  const rate = parseFloat(document.getElementById('rate').value);
+  const isRepayment = document.getElementById('repayment').checked;
+  const isInterestOnly = document.getElementById('interest-only').checked;
 
   // Validación simple
   if (!amount || !term || !rate) {
@@ -54,7 +54,7 @@ function displayResult(monthlyPayment, totalPayment) {
               <p class="js-monthly result--container__monthly">£${monthlyPayment}</p>
               <hr class="horizontal-rule" />
               <p class="above-total">Total you'll pay over the term</p>
-              <p class="js-total result--container__total">£${totalPayment }</p>
+              <p class="js-total result--container__total">£${totalPayment}</p>
             </div>
           </div>
   
